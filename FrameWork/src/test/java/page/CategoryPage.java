@@ -33,7 +33,7 @@ public class CategoryPage extends AbstractPage {
 
     public CategoryPage applyFilter(String filter) {
         String firstItemName = driverWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(byItemsNames)).get(0).getText();
-        System.out.println(firstItemName);
+        logger.info("Applying filter " + filter);
         driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(
                 "//a[@class='ng-tns-c109-0 ng-star-inserted' and contains(text(), '" +
                 filter
